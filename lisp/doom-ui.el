@@ -528,7 +528,7 @@ windows, switch to `doom-fallback-buffer'. Otherwise, delegate to original
                         (new-specs nil))
                    (dolist (spec base-specs)
                      (let ((display (car spec))
-                           (plist (copy-tree (nth 1 spec))))
+                           (plist nil))
                        (when (or (memq display '(t default))
                                  (face-spec-set-match-display display frame))
                          (dolist (attr attrs)
